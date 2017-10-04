@@ -11,7 +11,7 @@ const LoginUsers = [
     id: 2,
     username: 'hkz',
     password: '85691392',
-    avatar: 'https://raw.githubusercontent.com/taylorchen709/markdown-images/master/vueadmin/user.png',
+    avatar: 'https://raw.githubusercontent.com/xxcclong/vue-admin/master/src/assets/user.png',
     name: '黄可钊'
   }
 ];
@@ -21,11 +21,11 @@ const Users = [];
 for (let i = 0; i < 86; i++) {
   Users.push(Mock.mock({
     id: Mock.Random.guid(),
-    name: Mock.Random.cname(),
-    addr: Mock.mock('@county(true)'),
-    'age|18-60': 1,
-    birth: Mock.Random.date(),
-    sex: Mock.Random.integer(0, 1)
+    name: Mock.Random.cword(1,6),
+    addr: Mock.mock('@csentence()'),
+    'age|1-5000': 1,
+    birth: Mock.Random.datetime('y-MM-dd HH:mm:ss'),
+    sex: Mock.Random.integer(0, 2)
   }));
 }
 

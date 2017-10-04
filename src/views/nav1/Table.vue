@@ -23,11 +23,11 @@
 			</el-table-column>
 			<el-table-column prop="name" label="文件名" width="120" sortable>
 			</el-table-column>
-			<el-table-column prop="sex" label="可下载" width="100" :formatter="formatSex" sortable>
+			<el-table-column prop="sex" label="操作权限" width="100" :formatter="formatSex" sortable>
 			</el-table-column>
 			<el-table-column prop="age" label="大小" width="100" sortable>
 			</el-table-column>
-			<el-table-column prop="birth" label="上传日期" width="120" sortable>
+			<el-table-column prop="birth" label="上传日期" width="100" sortable>
 			</el-table-column>
 			<el-table-column prop="addr" label="描述" min-width="180" sortable>
 			</el-table-column>
@@ -159,7 +159,7 @@
 		methods: {
 			//性别显示转换
 			formatSex: function (row, column) {
-				return row.sex == 1 ? '男' : row.sex == 0 ? '女' : '未知';
+				return row.sex == 1 ? '操作级别1' : row.sex == 0 ? '操作级别2' : '操作级别3';
 			},
 			handleCurrentChange(val) {
 				this.page = val;

@@ -49,7 +49,7 @@
 		methods: {
 			//性别显示转换
 			formatSex: function (row, column) {
-				return row.sex == 1 ? '男' : row.sex == 0 ? '女' : '未知';
+				return row.sex == 1 ? '操作级别1' : row.sex == 0 ? '操作级别2' : '操作级别3';
 			},
 			//获取用户列表
 			getUser: function () {
